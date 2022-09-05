@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Save Student form</h2>
+      <form id="studentForm" method="post">
+        <div class="form-group">
+          <span
+            ><label for="studentId">Student ID:</label>
+            <label id="studentIdMsg"> </label
+          ></span>
+          <input
+            type="text"
+            class="form-control"
+            name="studentId"
+            id="studentId"
+            placeholder="Enter Student ID"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="studentName">Student Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="studentName"
+            placeholder="Enter Student Name"
+            name="studentName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="studentEmail">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="studentEmail"
+            placeholder="Enter Student Email"
+            name="studentEmail"
+          />
+        </div>
+        <div class="form-group">
+          <label for="studentMobileNo">Mobile Number:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="studentMobileNo"
+            placeholder="Enter Student Mobile Number"
+            name="studentMobileNo"
+          />
+        </div>
+        <input
+          type="button"
+          class="btn btn-primary"
+          id="empSave"
+          value="Save"
+          onclick="saveStudent();"
+        />
+      </form>
+    </div>
+    <br />
+    <hr />
+
+    <div class="container">
+      <h2>Update Student form</h2>
+      <form id="updateStudentForm" method="post">
+        <div class="form-group">
+          <span><label for="recordNo">Record No:</label> </span>
+          <input
+            type="text"
+            class="form-control"
+            name="recordNo"
+            id="recordNo"
+            placeholder="Enter record No"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <span><label for="updateStudentId">Student ID:</label> </span>
+          <input
+            type="text"
+            class="form-control"
+            name="studentId"
+            id="updateStudentId"
+            placeholder="Enter Student ID"
+          />
+        </div>
+        <div class="form-group">
+          <label for="updateStudentName">Student Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="updateStudentName"
+            placeholder="Enter Student Name"
+            name="updateStudentName"
+          />
+        </div>
+        <div class="form-group">
+          <label for="updateStudentEmail">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="updateStudentEmail"
+            placeholder="Enter Student Email"
+            name="updateStudentEmail"
+          />
+        </div>
+        <div class="form-group">
+          <label for="updateStudentMobileNo">Mobile Number:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="updateStudentMobileNo"
+            placeholder="Enter Student Mobile Number"
+            name="updateStudentMobileNo"
+          />
+        </div>
+        <input
+          type="button"
+          class="btn btn-primary"
+          id="updateStudent"
+          value="update"
+          onclick="updateStudentRecord();"
+        />
+      </form>
+    </div>
+    <br />
+    <hr />
+    <div class="container">
+      <h2>Delete Student form</h2>
+      <form id="deleteStudentForm" method="post">
+        <div class="form-group">
+          <span><label for="deleteRecordNo">Record No:</label> </span>
+          <input
+            type="text"
+            class="form-control"
+            name="deleteRecordNo"
+            id="deleteRecordNo"
+            placeholder="Enter record No"
+            required
+          />
+        </div>
+
+        <input
+          type="button"
+          class="btn btn-primary"
+          id="deleteStudent"
+          value="delete"
+          onclick="deleteStudentRecord();"
+        />
+      </form>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
